@@ -4,6 +4,16 @@
   padding: 0;
 }
 
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+button {
+  font-size: 1em;
+  padding: .15em .25em;
+}
+
 .full-screen-canvas {
   position: fixed;
   top: 0;
@@ -11,6 +21,7 @@
   right: 0;
   bottom: 0;
   background-color: #686868;
+  z-index: 0;
 }
 
 
@@ -22,6 +33,7 @@
   width: 20vw;
   max-width: 250px;
   transition: transform 333ms ease-in-out;
+  z-index: 2;
 }
 
 .drawer--left {
@@ -51,4 +63,59 @@
 
 .drawer--right .drawer__toggle {
   left: -50px;
+}
+
+.dice-panel {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  font-size: ;
+}
+
+.dice-panel__options {
+  display: inline-block;
+  list-style: none;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.dice-panel__options:before {
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -40px;
+  right: -40px;
+  bottom: -5px;
+  transform-origin: bottom center;
+  transform: perspective(400px) rotateX(60deg);
+  content: '';
+  background-color: #000;
+  z-index: 0;
+}
+
+.dice-panel__option {
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  margin: 0 2px;
+  transition: margin 333ms ease-in-out;
+}
+
+.dice-panel__option:hover {
+  margin: 0 6px;
+}
+
+.dice-panel__options button {
+  transform-origin: bottom center;
+  transition: transform 333ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dice-panel__option:hover button {
+  transform: scale(1.25) translateY(-20%);
+  z-index: 3;
 }

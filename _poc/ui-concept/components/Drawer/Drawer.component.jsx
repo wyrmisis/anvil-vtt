@@ -8,8 +8,6 @@ export default class Drawer extends Component {
   }
 
   render({ children, position, ...props }, { isOpen }) {
-    console.info(isOpen);
-
     return (
       <div class={cx('drawer', `drawer--${position || 'left'}`, isOpen && 'drawer--open')}>
         <div class="drawer__body">{children}</div>

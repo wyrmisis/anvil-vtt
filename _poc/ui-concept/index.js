@@ -2,7 +2,7 @@ import './style';
 import { Component } from 'preact';
 
 import Canvas from './components/Canvas/Canvas.component';
-// import DicePanel from './components/DicePanel.component';
+import DicePanel from './components/DicePanel/DicePanel.component';
 import Drawer from './components/Drawer/Drawer.component';
 
 export default class App extends Component {
@@ -16,6 +16,7 @@ export default class App extends Component {
         <Drawer position="right">
           Right Drawer
         </Drawer>
+        <DicePanel />
 			</div>
 		);
 	}
