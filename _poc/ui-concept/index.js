@@ -1,9 +1,11 @@
 import './style';
+import './assets/dicefont/dicefont';
+
 import { Component } from 'preact';
 
-import Canvas from './components/Canvas/Canvas.component';
-import DicePanel from './components/DicePanel/DicePanel.component';
-import Drawer from './components/Drawer/Drawer.component';
+import Canvas from './components/Canvas';
+import DicePanel from './components/DicePanel';
+import Drawer from './components/Drawer';
 
 export default class App extends Component {
 	render() {

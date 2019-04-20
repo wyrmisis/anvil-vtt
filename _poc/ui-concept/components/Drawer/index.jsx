@@ -1,3 +1,4 @@
+import './style';
 import cx from 'classnames';
 import ls from 'linkstate';
 import { Component } from 'preact';

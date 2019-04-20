@@ -1,7 +1,8 @@
+import './style';
 import cx from 'classnames';
 import { Component } from 'preact';
 
-const dieValues = [4, 6, 8, 10, 12, 20, 100];
+const dieValues = [4, 6, 8, 10, 12, 20];
 
 const DicePanel = () => (
   <div class="dice-panel">
@@ -24,8 +25,8 @@ class DieOption extends Component {
 
   render({ count = 1, value }) {
     return (
-      <button class={cx('dice-panel__roll-button', `dice-panel__roll-button--${value}`)} onClick={() => this.doRoll()}>
-        {count}d{value}
+      <button class={cx('dice-panel__roll-button', `dice-panel__roll-button--${value}`, `df-d${value}-${value}`)} onClick={() => this.doRoll()}>
+        Roll {count}d{value}
       </button>
     );
   }
