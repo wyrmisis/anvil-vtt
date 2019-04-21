@@ -1,0 +1,33 @@
+.home {
+	padding: 56px 20px;
+	min-height: 100%;
+	width: 100%;
+
+  background-image: url(assets/campfire-1x.jpg);
+  background-size: cover;
+}
+
+.home__content {
+  position: fixed;
+  bottom: 0;
+
+  color: #fff;
+  max-width: 480px;
+  text-shadow: 2px 2px 7px rgba(68,68,68,0.66);
+}
+
+.home__content a {
+  color: #ffcb97;
+}
+
+.home__heading {
+  font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+}
+
+.home__lede {
+
+}
+
+.home__attribution {
+
+}

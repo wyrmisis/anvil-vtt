@@ -1,0 +1,39 @@
+:global .drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 20vw;
+  max-width: 250px;
+  transition: transform 333ms ease-in-out;
+  z-index: 2;
+}
+
+:global .drawer--left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+:global .drawer--right {
+  right: 0;
+  transform: translateX(100%);
+}
+
+:global .drawer--open {
+  transform: translateX(0%);
+}
+
+:global .drawer__toggle {
+  position: absolute;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+:global .drawer--left .drawer__toggle {
+  right: -50px;
+}
+
+:global .drawer--right .drawer__toggle {
+  left: -50px;
+}
